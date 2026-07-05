@@ -5,10 +5,8 @@ const getNextCar = (cars) => {
 const getCarByNumber = (cars, num) => {
     for (const car of cars) {
         if (car.carNumber === num) return car
-        else {
-            console.log(`car number ${num} not found in the current race.`);
-        }
     }
+    console.log(`car number ${num} not found in the current race.`);
 }
 
 
