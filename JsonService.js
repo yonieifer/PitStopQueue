@@ -1,11 +1,10 @@
-import { error, log } from "console"
 import fs from "fs/promises"
 
 
 const carsPath = "./data/cars.json"
 const racePath = "./data/race.json"
 
-const getCarsAndRaceData = async () => {
+export const getCarsAndRaceData = async () => {
     try {
         const carsRes = await fs.readFile(carsPath, "utf8").then(data => JSON.parse(data))
 
@@ -21,17 +20,7 @@ const getCarsAndRaceData = async () => {
 }
 
 
-const getNextCar = (cars) => {
-    return cars[0]
-}
 
-const getCarByNumber = (cars, num) => {
-    for (const car of cars) {
-        if (car.carNumber === num) return car
-        else {
-            console.log(`car number ${num} not found in the current race.`);
-        }
-    }
-}
 
-export {getCarByNumber, getNextCar, getCarsAndRaceData}
+
+
