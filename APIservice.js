@@ -8,15 +8,17 @@ const racePath = "./data/race.json"
 
 const loadFromAPI = async () => {
     try {
+        console.log("Loading queue data...");
         
-    const response = await fetch(APIpath)
-    
-    if (!response.ok) {
-        throw new Error(`error: ${response.status}`)
-        }
-    const data = await response.json()
-    
-    return data
+        const response = await fetch(APIpath)
+        
+        if (!response.ok) {
+            throw new Error(`error: ${response.status}`)
+            }
+            
+        const data = await response.json()
+        
+        return data
     
     } catch (err) {
         console.log(`Error - ${err}`)

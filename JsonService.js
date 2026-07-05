@@ -33,3 +33,5 @@ const getCarByNumber = (cars, num) => {
         }
     }
 }
+
+export {getCarByNumber, getNextCar, getCarsAndRaceData}
